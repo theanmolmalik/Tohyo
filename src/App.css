@@ -110,3 +110,19 @@ pre {
 .hasura-logo img {
   margin-bottom: 12px;
 }
+
+.info{
+  padding:0 15%;
+}
+
+.infoBlock{
+  padding: 5% 0;
+}
+
+.custom{
+  padding-left: 15em;
+}
+
+.navCustom{
+  margin-left: 3em;
+}

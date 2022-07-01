@@ -1,7 +1,8 @@
 import React from "react";
 import logoHeader from "./img/Logo Header.svg";
 import logoFooter from "./img/Logo Footer.svg";
-
+import {Link} from "react-router-dom";
+import "./App.css";
 // State indicator components
 export const Loading = () => <div>Loading...</div>;
 export const Error = ({ message }) => (
@@ -16,6 +17,12 @@ export const Header = () => (
     <div className="container displayFlex">
       <img src={logoHeader} className="App-logo" alt="logo" />
       <h1 className="App-title">An Online Voting Platform</h1>
+    </div>
+    <div className="container displayFlex navCustomMain">
+      <div className="navCustom" style={{color: "white",textDecoration:"none"}}><Link to="/">Home</Link></div>
+      <div className="navCustom" style={{color: "white",textDecoration:"none"}}><Link to="/info">Info</Link></div>
+      <div className="navCustom" style={{color: "white",textDecoration:"none"}}><Link to="/Vote">Vote</Link></div>
+      <div className="navCustom" style={{color: "white",textDecoration:"none"}}><Link to="/contact">Contact Us</Link></div>
     </div>
   </header>
 );
