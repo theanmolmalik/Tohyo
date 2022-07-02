@@ -58,7 +58,6 @@ export default function Vote() {
   }
   return (
     <div>
-    <h1 className="poll__title">Which do you prefer?</h1>
       <h1> {data.heading} </h1>
       {data.data.map((x) => (
         <button onClick={() => addVote(x.id)}> {x.name}</button>
