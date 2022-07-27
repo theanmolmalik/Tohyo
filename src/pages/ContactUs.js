@@ -24,10 +24,21 @@ export default function ContactUs() {
     }
   };
 
+  function isValid(email)
+  {
+      const regexEmail=/^[a-zA-Z0-9.!#$%&’+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+
+      return regexEmail.test(email)?1:0;
+  }
+
   const submit = () => {
     if (name === "" || email === "" || message === "") {
       alert("you must fill all the feilds");
-    } else {
+    } 
+    else if(!isValid(email))
+    {
+        alert("Invalid Email");
+    }else {
       makeRequest();
       setName("");
       setEmail("");
